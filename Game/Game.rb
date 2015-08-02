@@ -41,8 +41,7 @@ if  door == "1" || door == "Door #1" || door == "#1" || door == "one" || door ==
 			bear_pickup = $stdin.gets.chomp
 			if bear_pickup == "pick up the rope"
 				puts "You reach for the rope on the ground to your left. After a moment's consternation, you realize you reached for it with a hand you no longer have."
-				puts "Shaking off the impending scream of horror, you reach for the rope with your right hand and pick it up, glad to have survived."
-
+				puts "Shaking off the impending scream of horror, you reach for the rope with your right hand and pick it up."
 			end
 		elsif bear_decision == "rush"
 			puts "You rush towards the bear, trying your hardest to appear frightening while bleeding profusely, tantalizingly from one arm."
@@ -66,16 +65,10 @@ if  door == "1" || door == "Door #1" || door == "#1" || door == "one" || door ==
 		if bear_pickup_2 == "pick up the rope"
 
 		elsif bear_pickup_2 == "pick up the knife" || bear_pickup_2 == "pick up knife" || bear_pickup_2 == "knife"
-			puts "You have chosen the path of the warrior. Your senses, as sharp as the edge of the knife that is your symbol, detects a brillaint shine from above."
-			puts "A disembodied voice echoes in your ears as you are engulfed by light. 'The path has been chosen. Sleep now. There is much ahead, young warrior.'"
-			puts "These are the last words you hear before the bright white light turns into the blackened darkness of unconsciousness."
 
 		elsif bear_pickup_2 == "pick up the straitjacket" || bear_pickup_2 == "pick up straitjacket" || bear_pickup_2 == "straitjacket"
-			puts "You have"
 
 		elsif bear_pickup_2 == "take everything" || bear_pickup_2 == "take all" || bear_pickup_2 == "everything"
-			puts "Words"
-		end
 				
 				
 	else 
@@ -90,38 +83,13 @@ elsif door == "2" || door == "Door #2" || door == "door #2" || door =="door 2" |
 	puts "3. Understanding revolvers yelling melodies."
 
 	print "Hit Points: #{$hit_points}\n> "
-		maze_decision = $stdin.gets.chomp
+	insanity = $stdin.gets.chomp
 
-		if maze_decision == "1" || maze_decision == "Enter" || maze_decision == "Enter the maze." || maze_decision == "enter"
-			puts "You walk forwards into yourself, following a hallway that seems to always be shifting, even though your feet move ever in a straight line."
-			puts "You see"
-			puts "You hear"
-			puts "Where do you go? You can go "
-		elsif maze_decision == "2" || maze_decision == "Look around." || maze_decision == "look around" || maze_decision == "look"
-			puts "You look around intensely, trying to decipher the falsehood of mirrors from the actual reality in the maze."
-			puts "The longer you stare, the harder it becomes to recognize what's real and what is simple trickery."
-			puts "A sudden dizzy spell comes over you, bringing you to your knees. When you stand back up, you notice the hall has shifted."
-			puts "Do you 'continue' forward? Do you try to 'investigate' what's different about the hall?"
-			print "Hit Points: #{$hit_points}\n> "
-			maze_decision_2 = $stdin.gets.chomp
-			if maze_decision_2 == "continue" || maze_decision_2 == "continue forward" || maze_decision_2 == "continue forwards"
-				puts "You take a few steps forwards, head still swimming. Before you have gone ten paces, you run into a mirror."
-				puts "You're almost certain that mirror wasn't there a moment ago. What do you want to do now?"
-				puts "You can 'investigate' the mirror, 'turn left', 'turn right', or 'go back' the way you came."
-				print "Hit Points: #{$hit_points}\n> "
-				maze_decision_3 = $stdin.gets.chomp
-				if maze_decision_3 == "investigate" || maze_decision_3 == "investigate the mirror" || maze_decision_3 == "mirror"
-					puts "You peer at the mirror through squinted eyes, trying to discern the source of your sense of uneasiness."
-					puts "Moving your gaze over the edges, you notice a small crack on the right edge. Following the crack, your eyes trace a symbol in the shape of a bird, wings spread in flight."
-					puts "As soon as you notice the final detail of its claws, the symbol begins to glow, as if from within."
-					puts "An unidentifiable light source spreads itself across the mirror."
-				elsif maze_decision_3 == "turn left" || maze_decision_3 == "left" || maze_decision_3 == "Turn left." || maze_decision_3 == "Turn left"
-					puts "You turn to the left, striking out in a new direction. As you walk, you begin to realize that there is no break in the mirrors to your right."
-					puts "Upon closer inspection, you "
-				end
-			end
-
-		end
+	if insanity == "1" || insanity == "2"
+		puts "Your body survives powered by a mind of jello. Good job!"
+	else
+		puts "The insanity rots your eyes into a pool of muck. Good job!"
+	end
 
 elsif door == "examine Door #1" || door == "examine door 1" || door == "examine 1" || door == "examine door #1" || door == "examine #1"
 	puts "Looking closely at Door #1, you see deep claw marks scratched into the door. Do you go through 'Door #1' or 'Door #2'? Alternatively, you can 'examine Door #1' or 'examine Door #2'."
@@ -207,8 +175,6 @@ elsif door == "examine Door #1" || door == "examine door 1" || door == "examine 
 				elsif maze_decision_3 == "turn left" || maze_decision_3 == "left" || maze_decision_3 == "Turn left." || maze_decision_3 == "Turn left"
 					puts "You turn to the left, striking out in a new direction. As you walk, you begin to realize that there is no break in the mirrors to your right."
 					puts "Upon closer inspection, you "
-				end
-			end
 
 		end
 	end
@@ -265,11 +231,14 @@ elsif door == "examine Door #2"
 					puts "Your keening rivals that of banshees in an unholy choir, driving the bear away, dragging its cheesake."
 					puts "You continue to wail, all the despair and blood loss adding a ragged edge to your voice."
 					puts "From the shadows, you hear an answering cry... or maybe it's just your mind beginning to enter shock."
-				end
-						
+				else
+					puts "The blood loss must be making you incoherent. What were you trying to do?"
+					print "Hit Points: #{$hit_points}\n> "
+					try_again7 = $stdin.gets.chomp
+					if 		
 			
 			end
-		elsif bear == "2" || bear == "yell" || bear == "Yell"
+		elsif bear == "2"
 			puts "The bear lumbers towards you, and with a single clawed swipe, tears your face off."
 			Health.taking_critical_damage
 			Health.taking_critical_damage
