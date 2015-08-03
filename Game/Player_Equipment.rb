@@ -1,4 +1,4 @@
-require '/Users/Archimedes/Dropbox/Programming/Game/Player_Health.rb'
+require 'Player_Health.rb'
 
 current_player_eq = []
 

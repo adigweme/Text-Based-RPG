@@ -1,6 +1,6 @@
 # Requiring modules previously written
-require '/Users/Archimedes/Dropbox/Programming/Game/Player_Health.rb'
-require '/Users/Archimedes/Dropbox/Programming/Game/Player_Equipment.rb'
+require 'Player_Health.rb'
+require 'Player_Equipment.rb'
 
 # Game intro text in paragraph form
 puts <<INTRO
@@ -211,7 +211,7 @@ elsif door == "examine Door #2"
 					puts "Shaking off the impending scream of horror, you reach for the rope with your right hand and pick it up."
 				elsif bear_pickup == "pick up the straitjacket" || bear_pickup == "straitjacket" || bear_pickup == "pickup the straitjacket"
 					puts "You reach for the strips of cloth that used to be a straitjacket."
-						
+					puts "The material feels thick and rough between your fingers."
 				end
 			elsif bear_decision == "rush" || bear_decision == "rush at the bear" || bear_decision == "rush bear" || bear_decision == "kill"
 				puts "You rush towards the bear, trying your hardest to appear frightening while bleeding profusely, tantalizingly from one arm."
